@@ -16,7 +16,8 @@ setuptools.setup(
     project_urls={
         "Homepage": "https://github.com/Rohan29-AN/vanilla_pay_python",
     },
-    packages=["vanillapay"],  
+    packages=["vanillapay"],
+    keywords=['vanilla pay','fintech','online_payment'],
     classifiers=[
         "Programming Language :: Python :: 3.12",
         "License :: OSI Approved :: MIT License",
