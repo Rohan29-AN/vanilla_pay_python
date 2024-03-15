@@ -3,7 +3,7 @@ import threading
 from dotenv import load_dotenv
 import os
 import sys
-
+from vanillapay.tools import hash_data
 
 load_dotenv()
 
@@ -25,8 +25,11 @@ try:
     paymentLink=api.initialize_payment(token=generatedToken,montant=10,devise='EUR',reference='REF-0001',panier='PANIER-01',notifUrl='https://google.com',redirectUrl='https://google.com')
     print(f"Your payment link: {paymentLink}")
 
-    api.checkTransactionsStatus(token=generatedToken,paymentLink="https://preprod.vanilla-pay.net/webpayment?id=eyJhbGciOiJIUzI1NiJ9.VlBJMjQwMzE1MTAyNTM4MjA.UWPypqD-LJwoFVUQp4vnq04NTOS4TG0ZSFVgFDx23-I")
-    
+    paymentStatus=api.checkTransactionsStatus(token=generatedToken,paymentLink="https://preprod.vanilla-pay.net/webpayment?id=eyJhbGciOiJIUzI1NiJ9.VlBJMjQwMzE1MTAyNTM4MjA.UWPypqD-LJwoFVUQp4vnq04NTOS4TG0ZSFVgFDx23-I")
+    print(f"Payment Status: {paymentStatus}")
+
+    hashed_data=hash_data('shutt','vanilla pay international')
+    print(f"Hashed data: {hashed_data}")
 except Exception as e:
     print(f"{e}")
 

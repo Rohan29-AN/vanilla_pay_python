@@ -136,23 +136,20 @@ class VanillaPay:
          id_value = tools.extract_id_from_url(paymentLink)
          url=f"{self.url}/webpayment/status/{id_value}"
 
-         print(f"ID VALUE: {id_value}")
-         print(f"URL : {url}")
          headers={
             'VPI-Version':self.vpiVersion,
             'Authorization': token
         }
 
-         print(headers)
 
          response=requests.get(url, headers=headers)
 
          if response.status_code == 200:
             data=response.json()
             code_retour=data.get('CodeRetour') 
-            print(data)
+            if(code_retour==200):
+                return data
          else:
-             print(response.json())
              detail_retour = response.json().get('DetailRetour')
              if detail_retour is not None and detail_retour != '': 
                 raise Exception(f"Failed to check transaction status: {response.status_code} - {response.reason} - {detail_retour}")
