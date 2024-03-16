@@ -8,7 +8,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="vanillapay", 
-    version="0.0.9", 
+    version="1.0.0", 
     author="Vanilla Pay Team",  
     description="This module offers a streamlined solution for seamlessly integrating the Vanilla Pay payment system into Python applications.",
     long_description=long_description, 

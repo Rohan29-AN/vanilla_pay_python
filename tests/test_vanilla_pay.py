@@ -34,7 +34,7 @@ class TestVanillaPay(unittest.TestCase):
         with self.assertRaises(Exception) as context:
             vanilla_pay.generate_token()
 
-        self.assertTrue('Error initializing payment' in str(context.exception))
+        self.assertTrue('Failed to generate token' in str(context.exception))
 
 
     @patch('requests.post')
