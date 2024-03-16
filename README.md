@@ -17,7 +17,7 @@
     </p>
 	 <p>
         <a href='https://pypi.org/project/vanillapay/'><img src='https://img.shields.io/pypi/v/vanillapay?style=for-the-badge'/></a>
-        <a href='https://github.com/rohan29-an/Mvola'> 
+        <a href='https://github.com/rohan29-an/vanilla_pay_python'> 
             <img src="https://img.shields.io/badge/-python-396E9B?style=for-the-badge&logo=python&logoColor=FFFFFF"/>
         </a>
         <a href='#'> 
@@ -37,7 +37,7 @@
 You can consult the link on [here](https://pypi.org/project/vanillapay/) for mode documentation.
 
 ```s
-pip install mvola==1.0.5
+pip install vanillapay==1.0.1
 ```
 
 ## Usage 
