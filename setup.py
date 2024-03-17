@@ -25,6 +25,6 @@ setuptools.setup(
     ], 
     python_requires=">=3.12",
     py_modules=["vanillapay"],  
-    install_requires=["requests"], 
+    install_requires=["requests","python-dotenv"], 
     include_package_data=True,
 )
